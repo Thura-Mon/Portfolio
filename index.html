@@ -668,6 +668,38 @@
             box-shadow: 0 0 5px rgba(255, 235, 59, 0.5), 0 0 10px rgba(50, 255, 82, 0.5);
         }
 
+        /* New CSS for the proficiency display */
+        .proficiency-display {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: var(--neon-green);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+            white-space: nowrap;
+            z-index: 10;
+            border: 1px solid var(--neon-green);
+        }
+        .paused {
+            animation-play-state: paused;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -60%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
         /* Keyframe animations for specific percentages */
         @keyframes fill-80 {
             0% { width: 0%; }
@@ -920,7 +952,7 @@
                         <div class="neon-green-border">
                             <div class="skill-slider-container">
                                 <div class="skill-slide-track frontend-track">
-                                    <div class="skill-card">
+                                    <div class="skill-card flex flex-col justify-between items-center" data-proficiency="80">
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" alt="HTML5 Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                                         <h4 class="text-xl font-bold text-primary-text">HTML5</h4>
                                         <div class="progress-bar-container">
@@ -928,7 +960,7 @@
                                             <div class="progress-bar-fill progress-bar-green fill-80 is-visible"></div>
                                         </div>
                                     </div>
-                                    <div class="skill-card">
+                                    <div class="skill-card flex flex-col justify-between items-center" data-proficiency="80">
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" alt="CSS3 Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                                         <h4 class="text-xl font-bold text-primary-text">CSS3</h4>
                                         <div class="progress-bar-container">
@@ -936,7 +968,7 @@
                                             <div class="progress-bar-fill progress-bar-green fill-80 is-visible"></div>
                                         </div>
                                     </div>
-                                    <div class="skill-card">
+                                    <div class="skill-card flex flex-col justify-between items-center" data-proficiency="70">
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                                         <h4 class="text-xl font-bold text-primary-text">JavaScript</h4>
                                         <div class="progress-bar-container">
@@ -944,7 +976,7 @@
                                             <div class="progress-bar-fill progress-bar-green fill-70 is-visible"></div>
                                         </div>
                                     </div>
-                                    <div class="skill-card">
+                                    <div class="skill-card flex flex-col justify-between items-center" data-proficiency="80">
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" alt="HTML5 Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                                         <h4 class="text-xl font-bold text-primary-text">HTML5</h4>
                                         <div class="progress-bar-container">
@@ -952,7 +984,7 @@
                                             <div class="progress-bar-fill progress-bar-green fill-80 is-visible"></div>
                                         </div>
                                     </div>
-                                    <div class="skill-card">
+                                    <div class="skill-card flex flex-col justify-between items-center" data-proficiency="80">
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" alt="CSS3 Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                                         <h4 class="text-xl font-bold text-primary-text">CSS3</h4>
                                         <div class="progress-bar-container">
@@ -960,7 +992,7 @@
                                             <div class="progress-bar-fill progress-bar-green fill-80 is-visible"></div>
                                         </div>
                                     </div>
-                                    <div class="skill-card">
+                                    <div class="skill-card flex flex-col justify-between items-center" data-proficiency="70">
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                                         <h4 class="text-xl font-bold text-primary-text">JavaScript</h4>
                                         <div class="progress-bar-container">
@@ -978,7 +1010,7 @@
                         <div class="neon-green-border">
                             <div class="skill-slider-container">
                                 <div class="skill-slide-track backend-track">
-                                    <div class="skill-card">
+                                    <div class="skill-card flex flex-col justify-between items-center" data-proficiency="80">
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                                         <h4 class="text-xl font-bold text-primary-text">PHP</h4>
                                         <div class="progress-bar-container">
@@ -986,7 +1018,7 @@
                                             <div class="progress-bar-fill progress-bar-green fill-80 is-visible"></div>
                                         </div>
                                     </div>
-                                    <div class="skill-card">
+                                    <div class="skill-card flex flex-col justify-between items-center" data-proficiency="80">
                                         <img src="Laravel.svg.png" alt="Laravel Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                                         <h4 class="text-xl font-bold text-primary-text">Laravel</h4>
                                         <div class="progress-bar-container">
@@ -994,7 +1026,7 @@
                                             <div class="progress-bar-fill progress-bar-green fill-80 is-visible"></div>
                                         </div>
                                     </div>
-                                    <div class="skill-card">
+                                    <div class="skill-card flex flex-col justify-between items-center" data-proficiency="40">
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C# Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                                         <h4 class="text-xl font-bold text-primary-text">C#</h4>
                                         <div class="progress-bar-container">
@@ -1002,7 +1034,7 @@
                                             <div class="progress-bar-fill progress-bar-yellow fill-40 is-visible"></div>
                                         </div>
                                     </div>
-                                    <div class="skill-card">
+                                    <div class="skill-card flex flex-col justify-between items-center" data-proficiency="40">
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                                         <h4 class="text-xl font-bold text-primary-text">J2EE</h4>
                                         <div class="progress-bar-container">
@@ -1010,7 +1042,7 @@
                                             <div class="progress-bar-fill progress-bar-yellow fill-40 is-visible"></div>
                                         </div>
                                     </div>
-                                    <div class="skill-card">
+                                    <div class="skill-card flex flex-col justify-between items-center" data-proficiency="80">
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                                         <h4 class="text-xl font-bold text-primary-text">PHP</h4>
                                         <div class="progress-bar-container">
@@ -1018,7 +1050,7 @@
                                             <div class="progress-bar-fill progress-bar-green fill-80 is-visible"></div>
                                         </div>
                                     </div>
-                                    <div class="skill-card">
+                                    <div class="skill-card flex flex-col justify-between items-center" data-proficiency="80">
                                         <img src="Laravel.svg.png" alt="Laravel Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                                         <h4 class="text-xl font-bold text-primary-text">Laravel</h4>
                                         <div class="progress-bar-container">
@@ -1026,7 +1058,7 @@
                                             <div class="progress-bar-fill progress-bar-green fill-80 is-visible"></div>
                                         </div>
                                     </div>
-                                    <div class="skill-card">
+                                    <div class="skill-card flex flex-col justify-between items-center" data-proficiency="40">
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C# Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                                         <h4 class="text-xl font-bold text-primary-text">C#</h4>
                                         <div class="progress-bar-container">
@@ -1034,7 +1066,7 @@
                                             <div class="progress-bar-fill progress-bar-yellow fill-40 is-visible"></div>
                                         </div>
                                     </div>
-                                    <div class="skill-card">
+                                    <div class="skill-card flex flex-col justify-between items-center" data-proficiency="40">
                                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                                         <h4 class="text-xl font-bold text-primary-text">J2EE</h4>
                                         <div class="progress-bar-container">
@@ -1053,8 +1085,8 @@
     <div class="w-full lg:w-1/3 equal-height-item">
         <h3 class="text-2xl font-bold text-primary-text mb-6">Mobile Development</h3>
         <div class="neon-green-border full-height-card">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 grid-stretch">
-                <div class="skill-card">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 grid-stretch"> 
+                <div class="skill-card flex flex-col justify-between items-center" data-proficiency="70">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                     <h4 class="text-xl font-bold text-primary-text">Dart</h4>
                     <div class="progress-bar-container">
@@ -1062,7 +1094,7 @@
                         <div class="progress-bar-fill progress-bar-green fill-70 is-visible"></div>
                     </div>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card flex flex-col justify-between items-center" data-proficiency="70">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                     <h4 class="text-xl font-bold text-primary-text">Flutter</h4>
                     <div class="progress-bar-container">
@@ -1077,7 +1109,7 @@
         <h3 class="text-2xl font-bold text-primary-text mb-6">Database</h3>
         <div class="neon-green-border full-height-card">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 grid-stretch">
-                <div class="skill-card">
+                <div class="skill-card flex flex-col justify-between items-center" data-proficiency="60">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                     <h4 class="text-xl font-bold text-primary-text">MySQL</h4>
                     <div class="progress-bar-container">
@@ -1085,7 +1117,7 @@
                         <div class="progress-bar-fill progress-bar-gradient fill-60 is-visible"></div>
                     </div>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card flex flex-col justify-between items-center" data-proficiency="60">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" alt="PostgreSQL Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                     <h4 class="text-xl font-bold text-primary-text">PostgreSQL</h4>
                     <div class="progress-bar-container">
@@ -1100,7 +1132,7 @@
         <h3 class="text-2xl font-bold text-primary-text mb-6">Cloud</h3>
         <div class="neon-green-border full-height-card">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 grid-stretch">
-                <div class="skill-card">
+                <div class="skill-card flex flex-col justify-between items-center" data-proficiency="45">
                     <img src="Laravel.svg.png" alt="Laravel Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                     <h4 class="text-xl font-bold text-primary-text" style="font-size: 15px;">Laravel Cloud</h4>
                     <div class="progress-bar-container">
@@ -1108,7 +1140,7 @@
                         <div class="progress-bar-fill progress-bar-yellow fill-45 is-visible"></div>
                     </div>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card flex flex-col justify-between items-center" data-proficiency="45">
                     <img src="supabase.png" alt="Supabase Logo" class="w-12 h-12 mx-auto mb-4" loading="lazy" />
                     <h4 class="text-xl font-bold text-primary-text">Supabase</h4>
                     <div class="progress-bar-container">
@@ -1350,8 +1382,8 @@
                 impact: "The application served its purpose as a solid university project, demonstrating my ability to build a full-stack web application from the ground up.",
                 learnings: "This project enhanced my understanding of J2EE, Java, and database design with MySQL, particularly in a university project context.",
                 cta: [
-                    { label: "Live Demo", url: "#" },
-                    { label: "GitHub Repo", url: "#" }
+                    // { label: "Live Demo", url: "#" },
+                    // { label: "GitHub Repo", url: "#" }
                 ]
             },
             "expense-tracker": {
@@ -1736,6 +1768,49 @@
 
         });
         
+
+const skillCards = document.querySelectorAll('.skill-card');
+const frontendTrack = document.querySelector('.frontend-track');
+const backendTrack = document.querySelector('.backend-track');
+
+skillCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const track = card.closest('.skill-slide-track');
+        const existingDisplay = card.querySelector('.proficiency-display');
+
+        // Remove any other active displays and unpause their tracks first
+        document.querySelectorAll('.proficiency-display').forEach(display => {
+            display.remove();
+        });
+        if (frontendTrack) {
+            frontendTrack.classList.remove('paused');
+        }
+        if (backendTrack) {
+            backendTrack.classList.remove('paused');
+        }
+
+        // Check if a display already existed on this card. If so, we are toggling it off.
+        if (existingDisplay) {
+            return;
+        }
+
+        // Add the new display and pause the current track if it's part of a slider
+        const proficiency = card.getAttribute('data-proficiency');
+        if (proficiency) {
+            const proficiencyDisplay = document.createElement('div');
+            proficiencyDisplay.className = 'proficiency-display';
+            proficiencyDisplay.textContent = `${proficiency}%`;
+            card.appendChild(proficiencyDisplay);
+            
+            // Only pause the track if it's one of the scrolling carousels
+            if (track === frontendTrack) {
+                frontendTrack.classList.add('paused');
+            } else if (track === backendTrack) {
+                backendTrack.classList.add('paused');
+            }
+        }
+    });
+});
     </script>
 </body>
 </html>
