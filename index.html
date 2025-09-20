@@ -132,6 +132,18 @@
             background-color: var(--neon-cyan);
             box-shadow: 0 0 5px var(--neon-cyan), 0 0 10px var(--neon-cyan);
         }
+        .particle-purple{
+            background-color: var(--neon-purple);
+            box-shadow: 0 0 5px var(--neon-purple), 0 0 10px var(--neon-purple);
+        }
+        .particle-red{
+            background-color: var(--neon-red);
+            box-shadow: 0 0 5px var(--neon-red), 0 0 10px var(--neon-red);
+        }
+        .particle-pink{
+            background-color: var(--neon-pink);
+            box-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--neon-pink);
+        }
 
         /* New keyframe for a more subtle twinkle effect */
         @keyframes twinkle {
@@ -769,7 +781,7 @@
             </div>
 
             <nav class="hidden md:flex flex-grow justify-end space-x-8">
-                <ul class="flex items-center space-x-8">
+                <ul class="flex items-center space-x-8" onclick="backtohome()">
                     <li>
                         <a href="#hero" class="topbar-link relative block px-4 py-2 text-secondary-text hover:text-primary-text transition-colors">
                             Home
@@ -1433,8 +1445,13 @@
         const heroParticles = document.getElementById('hero-particles');
         
         // Revised JavaScript for particle effect to maintain a stable amount
-        const maxParticles = 40; // Maximum number of particles
+        const maxParticles = 25; // Maximum number of particles
         let currentParticles = 0;
+
+        function backtohome() {
+            mainContent.classList.remove('hidden');
+            projectPage.classList.add('hidden');
+        }
 
         function createCosmicParticle() {
             const body = document.body;
@@ -1446,12 +1463,12 @@
             // Modified logic for color selection
             let colorClass;
             const colorRoll = Math.random();
-            if (colorRoll < 0.4) {
-                colorClass = 'particle-green'; // 40% chance
-            } else if (colorRoll < 0.7) {
-                colorClass = 'particle-cyan'; // 30% chance
-            } else {
-                colorClass = 'particle-white'; // 30% chance
+            if (colorRoll < 0.6) {
+                colorClass = 'particle-green'; 
+            } else if (colorRoll < 0.8) {
+                colorClass = 'particle-white'; 
+            } else if (colorRoll < 0.9) {
+                colorClass = 'particle-purple';
             }
             particle.className = `particle ${colorClass}`;
 
@@ -1464,7 +1481,7 @@
             particle.style.left = `${startX}vw`;
             particle.style.top = `${startY}vh`;
             
-            particle.style.animationDuration = `${Math.random() * 5 + 5}s`; // New animation duration for faster movement
+            particle.style.animationDuration = `${Math.random() * 1 + 1}s`; // New animation duration for faster movement
             particle.style.animationDelay = `${Math.random() * 5}s`;
 
             body.appendChild(particle);
@@ -1707,14 +1724,14 @@
 
             // Start falling stars animation for each section
             starContainers.forEach(container => {
-                setInterval(() => createStar(container), 200);
+                setInterval(() => createStar(container), 100);
             });
 
             // Start cosmic particle effect across the body
             for (let i = 0; i < maxParticles; i++) {
                 createCosmicParticle();
             }
-            setInterval(createCosmicParticle, 150);
+            setInterval(createCosmicParticle, 50);
             startCarousel();
 
         });
