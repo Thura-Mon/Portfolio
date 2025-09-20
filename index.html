@@ -391,25 +391,17 @@
 
         .avatar-card {
             position: relative;
-            padding: 4px;
-            border-radius: 9999px;
-            animation: float 5s ease-in-out infinite;
-            transition: box-shadow 0.4s ease;
+            padding: 26px;
+            animation: float 2s ease-in-out infinite;
+            transition: box-shadow 0.2s ease;
         }
 
         .avatar-card::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(90deg, var(--neon-green), var(--neon-red), var(--neon-green), var(--neon-red));
-            background-size: 600% 400%;
-            border-radius: 9999px;
-            animation: runningBorder 4s linear infinite;
+            animation: runningBorder 3s linear infinite;
             z-index: -1;
-        }
-
-        .avatar-card:hover {
-            box-shadow: 0 0 10px var(--neon-green);
         }
 
         .avatar-image {
@@ -931,7 +923,7 @@
                 I thrive on solving complex problems and am always eager to learn new technologies. When I'm not coding, you can find me exploring the latest tech trends, reading the motivational books, or enjoying a good cup of coffee.
             </p>
         </div>
-        <div class="w-full md:w-1/2 flex justify-center relative">
+        <div class="w-full md:w-1/2 flex justify-center relative avatar-card">
             <!-- <div class="glowing-bg absolute inset-0 rounded-full"></div> -->
             <div class=" z-10">
 <img src="thuramon.png" alt="Thura Mon" class=" rounded-[30%] m-auto w-[75%] h-full object-cover" loading="lazy">
@@ -1502,7 +1494,7 @@
             }
             particle.className = `particle ${colorClass}`;
 
-            const size = Math.random() * 3 + 1;
+            const size = Math.random() * 2 + 1;
             particle.style.width = `${size}px`;
             particle.style.height = `${size}px`;
             
@@ -1511,7 +1503,7 @@
             particle.style.left = `${startX}vw`;
             particle.style.top = `${startY}vh`;
             
-            particle.style.animationDuration = `${Math.random() * 1 + 1}s`; // New animation duration for faster movement
+            particle.style.animationDuration = `${Math.random() * 3 + 1}s`; // New animation duration for faster movement
             particle.style.animationDelay = `${Math.random() * 5}s`;
 
             body.appendChild(particle);
@@ -1539,8 +1531,8 @@
         function startTypingEffect() {
             typeWriter("Thura Mon", mainHeadingText, () => {
                 setTimeout(() => {
-                    typeWriter("Full Stack Developer", subHeadingText);
-                }, 500);
+                    typeWriter("Junior Full Stack Developer", subHeadingText);
+                }, 700);
             });
         }
 
