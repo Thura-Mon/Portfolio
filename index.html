@@ -1469,7 +1469,7 @@
         const heroParticles = document.getElementById('hero-particles');
         
         // Revised JavaScript for particle effect to maintain a stable amount
-        const maxParticles = 20; // Maximum number of particles
+        const maxParticles = 12; // Maximum number of particles
         let currentParticles = 0;
 
         function backtohome() {
@@ -1487,7 +1487,7 @@
             // Modified logic for color selection
             let colorClass;
             const colorRoll = Math.random();
-            if (colorRoll < 0.6) {
+            if (colorRoll < 0.7) {
                 colorClass = 'particle-green'; 
             } else {
                 colorClass = 'particle-white'; 
