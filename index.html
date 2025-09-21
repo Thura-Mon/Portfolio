@@ -1503,7 +1503,7 @@
             particle.style.left = `${startX}vw`;
             particle.style.top = `${startY}vh`;
             
-            particle.style.animationDuration = `${Math.random() * 5 + 1}s`; // New animation duration for faster movement
+            particle.style.animationDuration = `${Math.random() * 5 + 2}s`; // New animation duration for faster movement
             particle.style.animationDelay = `${Math.random() * 5}s`;
 
             body.appendChild(particle);
@@ -1801,6 +1801,32 @@ skillCards.forEach(card => {
         }
     });
 });
+
+        let mouseX = 0;
+        let mouseY = 0;
+
+        // Function to update mouse position
+        function updateMousePosition(e) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        }
+
+        // Add event listener for mouse movement
+        window.addEventListener('mousemove', updateMousePosition);
+
+        // Function to move particles based on mouse position
+        function moveParticles() {
+            const particleContainers = document.querySelectorAll('.hero-bg-particles, .hero-bg-particles-layer-2');
+            particleContainers.forEach(container => {
+                const rect = container.getBoundingClientRect();
+                const offsetX = ((mouseX - rect.width / 2) / rect.width) * 30; // Adjust multiplier for effect strength
+                const offsetY = ((mouseY - rect.height / 2) / rect.height) * 30; // Adjust multiplier for effect strength
+                container.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+            });
+            requestAnimationFrame(moveParticles);
+        }
+        moveParticles();
+
     </script>
 </body>
 </html>
