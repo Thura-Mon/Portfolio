@@ -9,8 +9,8 @@
             --primary-bg: #030712;
             --dark-charcoal: #0f172a;
             --card-bg: #1e293b;
-            --neon-yellow: #ffeb3b; /* Added neon yellow variable */
-            --neon-white: #e0e7ff; /* New neon white variable */
+            --neon-yellow: #ffeb3b; 
+            --neon-white: #e0e7ff; 
         }
 
         /* Dark/Light Mode Colors */
@@ -115,6 +115,10 @@
             background-color: var(--neon-pink);
             box-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--neon-pink);
         }
+        .particle-yellow{
+            background-color: var(--neon-yellow);
+            box-shadow: 0 0 5px var(--neon-yellow), 0 0 10px var(--neon-yellowa);
+        }
 
         /* New keyframe for a more subtle twinkle effect */
         @keyframes twinkle {
@@ -130,7 +134,7 @@
 
         .title-glow-gradient {
             color: var(--neon-green);
-            text-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.4);
+            text-shadow: 0 0 10px rgba(9, 72, 72, 0.6), 0 0 20px rgb(10, 82, 82);
             transition: all 0.5s ease;
         }
 
