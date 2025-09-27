@@ -70,31 +70,46 @@
             "images/CalorieTracker/update_profile.png"
 
         ],
-                context: "Developed a comprehensive web application where users can log their daily calorie intake. The system allows users to search for food items from a pre-defined list or use an online API to search for new items, complete with food images and nutrition information. The system also tracks BMI and recommends goals (Maintain, Gain, Lose Weight).",
-                role: "My role was to design and develop the entire application using C# ASP.NET. I was responsible for integrating two external APIs (USDA for nutrition data and Google for images), building the UI, and managing the SQL Server database.",
-                process: "The project involved creating a user registration and login system with OTP functionality for password recovery. I implemented the logic to fetch and display data from the external APIs. The system then calculates daily calorie intake, BMI, and provides goal-based recommendations.",
-                challenges: "A major challenge was seamlessly integrating external APIs to provide a vast database of food items and images. Handling API requests, parsing the data, and displaying it in a user-friendly manner required careful coding and error handling.",
-                outcome: "The result is a robust and highly functional web application that simplifies calorie tracking and goal management. The API integrations provide a rich user experience, making food logging effortless.",
-                impact: "This project highlights my ability to build complex, full-stack web applications with advanced features, demonstrating my proficiency in C# ASP.NET, SQL Server, and API integration.",
-                learnings: "This project significantly improved my skills in C# and ASP.NET development, specifically in working with web forms, database management, and consuming APIs.",
-                cta: [
-                    { label: "GitHub Repo", url: "https://github.com/Thura-Mon/Calorie-Tracking---Goal-Fitness" }
-                ]
-            },
+            context: "Developed a comprehensive web application where users can log their daily calorie intake. The system allows users to search for food items from a pre-defined list or use an online API to search for new items, complete with food images and nutrition information. The system also tracks BMI and recommends goals (Maintain, Gain, Lose Weight).",
+            role: "My role was to design and develop the entire application using C# ASP.NET. I was responsible for integrating two external APIs (USDA for nutrition data and Google for images), building the UI, and managing the SQL Server database.",
+            process: "The project involved creating a user registration and login system with OTP functionality for password recovery. I implemented the logic to fetch and display data from the external APIs. The system then calculates daily calorie intake, BMI, and provides goal-based recommendations.",
+            challenges: "A major challenge was seamlessly integrating external APIs to provide a vast database of food items and images. Handling API requests, parsing the data, and displaying it in a user-friendly manner required careful coding and error handling.",
+            outcome: "The result is a robust and highly functional web application that simplifies calorie tracking and goal management. The API integrations provide a rich user experience, making food logging effortless.",
+            impact: "This project highlights my ability to build complex, full-stack web applications with advanced features, demonstrating my proficiency in C# ASP.NET, SQL Server, and API integration.",
+            learnings: "This project significantly improved my skills in C# and ASP.NET development, specifically in working with web forms, database management, and consuming APIs.",
+            cta: [
+                { label: "GitHub Repo", url: "https://github.com/Thura-Mon/Calorie-Tracking---Goal-Fitness" }
+            ]
+        },
             "gym-membership": {
                 title: "Online Gym Membership System (Flutter & Laravel)",
                 tagline: "A mobile and web system for gym management, developed with Flutter and a Laravel backend API.",
-                image: "https://placehold.co/1200x600/0f172a/d1d5db?text=Gym+Membership+App+Mockup",
-                context: "Developed an online gym membership system, consisting of a mobile front-end for users and a Laravel backend. This project focused on creating a powerful and scalable backend to manage memberships and user data.",
-                role: "I was the primary backend developer for this project, focusing heavily on the backend API development with Laravel. I also developed the core 30% of the mobile app's front-end using Flutter to ensure full-stack integration.",
-                process: "The project began with a focus on designing API using Laravel. I then built the essential mobile views in Flutter that would communicate with this API for user authentication, profile management, and data retrieval.",
+                images: [
+                    "images/GymMembership/admin_dashboard.jpeg",
+                    "images/GymMembership/admin_memberlist.jpeg",
+                    "images/GymMembership/admin_package.jpeg",
+                    "images/GymMembership/admin_scanning_device.jpeg",
+                    "images/GymMembership/burmese_locale.jpeg",
+                    "images/GymMembership/init.jpeg",
+                    "images/GymMembership/slider.jpeg",
+                    "images/GymMembership/member_instruction.jpeg",
+                    "images/GymMembership/login.jpeg",
+                    "images/GymMembership/forgot_password.jpeg",
+                    "images/GymMembership/user_home.jpeg",
+                    "images/GymMembership/select_language.jpeg",
+                    "images/GymMembership/purchase_plan.jpeg",
+                    "images/GymMembership/bmi.jpeg",
+                    "images/GymMembership/drawer.jpeg"
+                ],
+                context: "Developed an online gym membership system, consisting of a mobile front-end for users, a Laravel backend and PostgreSql (Supabase). This project focused on creating a powerful and scalable backend to manage memberships and user data.",
+                role: "I was the primary backend developer for this project, focusing heavily on the backend API development with Laravel. I also developed the core 20% of the mobile app's front-end using Flutter to ensure full-stack integration.",
+                process: "The project began with a focus on designing API using Laravel. I then built the essential mobile views in Flutter that would communicate with this API for user authentication, profile management, and data retrieval from PostgreSQL using Supabase, 'Backend-as-a-Service (BaaS)'.",
                 challenges: "A key challenge was building a scalable backend that could handle multiple user requests efficiently while maintaining security. The integration between the Flutter front-end and the Laravel API required precise data handling and validation.",
                 outcome: "Successfully created a functional and scalable system with a strong backend foundation. The Laravel API is a powerful component that can support further development of the mobile app and other front-end clients.",
                 impact: "This project demonstrates my expertise in both mobile and backend development, showing my ability to build a robust system from the ground up using modern technologies.",
                 learnings: "This project provided valuable experience in Flutter development and solidified my skills in building professional, scalable, and secure backend systems with Laravel.",
                 cta: [
-                    { label: "Live Demo", url: "#" },
-                    { label: "GitHub Repo", url: "#" }
+                    { label: "GitHub Repo", url: "https://github.com/Thura-Mon/GymSystemBackend" }
                 ]
             }
         };
@@ -112,8 +127,8 @@
         const starContainers = document.querySelectorAll('.stars-container');
         const heroParticles = document.getElementById('hero-particles');
         
-        // Revised JavaScript for particle effect to maintain a stable amount
-        const maxParticles = 15; // Maximum number of particles
+    
+        const maxParticles = 15; 
         let currentParticles = 0;
 
         function backtohome() {
@@ -128,7 +143,6 @@
             }
             
             const particle = document.createElement('div');
-            // Modified logic for color selection
             let colorClass;
             const colorRoll = Math.random();
             if (colorRoll < 0.7) {
@@ -147,7 +161,7 @@
             particle.style.left = `${startX}vw`;
             particle.style.top = `${startY}vh`;
             
-            particle.style.animationDuration = `${Math.random() * 5 + 2}s`; // New animation duration for faster movement
+            particle.style.animationDuration = `${Math.random() * 5 + 2}s`; // animation movement speed
             particle.style.animationDelay = `${Math.random() * 5}s`;
 
             body.appendChild(particle);
@@ -184,7 +198,6 @@
             const project = projectsData[projectId];
             if (!project) return;
 
-            // Hide the main content and show the project page
             mainContent.classList.add('hidden');
             projectPage.classList.remove('hidden');
 
@@ -244,7 +257,7 @@
             startCarousel(project.images);
 
 
-            window.scrollTo(0, 0); // Scroll to top of page
+            window.scrollTo(0, 0); 
         }
 
         function startCarousel(images = null) {
@@ -260,7 +273,7 @@
                         let currentIndex = 0;
                         const images = carousel.querySelectorAll('img');
                         const totalImages = images.length;
-                        const intervalTime = 3000; // Time in ms to wait before sliding
+                        const intervalTime = 3000;
 
                         function slideImages() {
                             currentIndex = (currentIndex + 1) % totalImages;
@@ -325,20 +338,18 @@
 
         // Parallax Effect
         function handleParallax(e) {
-            // Mouse-based parallax
             const mouseX = e.clientX / window.innerWidth - 0.5;
             const mouseY = e.clientY / window.innerHeight - 0.5;
             const heroParticles = document.getElementById('hero-particles');
 
             heroParticles.style.transform = `translate(${mouseX * 20}px, ${mouseY * 20}px)`;
             
-            // Scroll-based parallax
             const scrollY = window.scrollY;
-            heroParticles.style.transform += `translateY(-${scrollY * 0.2}px)`; // Slower than scroll
+            heroParticles.style.transform += `translateY(-${scrollY * 0.2}px)`; 
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Initialize AOS
+        
             AOS.init({
                 duration: 800,
                 easing: 'ease-in-out',
@@ -359,7 +370,6 @@
             attachProjectCardListeners();
             handleMobileMenu();
 
-            // Intersection observer for fade-in effect and active links
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
@@ -377,9 +387,6 @@
                             navLinks.forEach(link => link.classList.remove('active'));
                             correspondingLink.classList.add('active');
                         }
-                    } else {
-                        // Optional: remove class when not visible
-                        // entry.target.classList.remove('is-visible');
                     }
                 });
             }, observerOptions);
@@ -412,7 +419,6 @@ skillCards.forEach(card => {
         const track = card.closest('.skill-slide-track');
         const existingDisplay = card.querySelector('.proficiency-display');
 
-        // Remove any other active displays and unpause their tracks first
         document.querySelectorAll('.proficiency-display').forEach(display => {
             display.remove();
         });
@@ -423,12 +429,11 @@ skillCards.forEach(card => {
             backendTrack.classList.remove('paused');
         }
 
-        // Check if a display already existed on this card. If so, we are toggling it off.
+       
         if (existingDisplay) {
             return;
         }
 
-        // Add the new display and pause the current track if it's part of a slider
         const proficiency = card.getAttribute('data-proficiency');
         if (proficiency) {
             const proficiencyDisplay = document.createElement('div');
@@ -436,7 +441,7 @@ skillCards.forEach(card => {
             proficiencyDisplay.textContent = `${proficiency}%`;
             card.appendChild(proficiencyDisplay);
             
-            // Only pause the track if it's one of the scrolling carousels
+           
             if (track === frontendTrack) {
                 frontendTrack.classList.add('paused');
             } else if (track === backendTrack) {
@@ -449,22 +454,20 @@ skillCards.forEach(card => {
         let mouseX = 0;
         let mouseY = 0;
 
-        // Function to update mouse position
+
         function updateMousePosition(e) {
             mouseX = e.clientX;
             mouseY = e.clientY;
         }
 
-        // Add event listener for mouse movement
         window.addEventListener('mousemove', updateMousePosition);
 
-        // Function to move particles based on mouse position
         function moveParticles() {
             const particleContainers = document.querySelectorAll('.hero-bg-particles, .hero-bg-particles-layer-2');
             particleContainers.forEach(container => {
                 const rect = container.getBoundingClientRect();
-                const offsetX = ((mouseX - rect.width / 2) / rect.width) * 30; // Adjust multiplier for effect strength
-                const offsetY = ((mouseY - rect.height / 2) / rect.height) * 30; // Adjust multiplier for effect strength
+                const offsetX = ((mouseX - rect.width / 2) / rect.width) * 30; 
+                const offsetY = ((mouseY - rect.height / 2) / rect.height) * 30; 
                 container.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
             });
             requestAnimationFrame(moveParticles);
