@@ -1,7 +1,7 @@
     const projectsData = {
             "calorie-counter": {
-                title: "Calorie Counter (JavaEE)",
-                tagline: "A university project developed with JavaEE and MySQL to help users track calories and check their BMI.",
+                title: "Calorie Counter (JavaEE)", 
+                tagline: "A university project developed with JavaEE and MySQL to help users track calories and check their BMI. <span style = 'color: #84cc16; font-weight: bold;'><a href ='https://github.com/Thura-Mon/Daily-Calorie-Intake-Counter---BMI-Calculator' >Check GitHub Repository</a></span>",
                 images: [
             "images/CalorieCounter/Signup.png",
             "images/CalorieCounter/manage_food.png",
@@ -24,7 +24,7 @@
             },
             "expense-tracker": {
                 title: "Expense Tracker (PHP)",
-                tagline: "A full-stack PHP and MySQL web application for department-based expense reporting with SMTP for OTP.",
+                tagline: "A full-stack PHP and MySQL web application for department-based expense reporting with SMTP for OTP. <span style = 'color: #84cc16; font-weight: bold;'><a href ='https://github.com/Thura-Mon/Expense-Tracker' >Check GitHub Repository</a></span>",
                 images: [
             "images/ExprenseTrackingSystem/index.png",
             "images/ExprenseTrackingSystem/admin_login.png",
@@ -53,7 +53,7 @@
             },
             "calorie-tracking": {
                 title: "Calorie Tracking & Goal Monitoring System (C# ASP.NET)",
-                tagline: "A full-stack C# ASP.NET web application using SQL Server, USDA Food API, and Google Image API.",
+                tagline: "A full-stack C# ASP.NET web application using SQL Server, USDA Food API, and Google Image API. <span style = 'color: #84cc16; font-weight: bold;'><a href ='https://github.com/Thura-Mon/Calorie-Tracking---Goal-Fitness' >Check GitHub Repository</a></span>",
                 images: [
             "images/CalorieTracker/createacc.png",
             "images/CalorieTracker/login.png",
@@ -83,7 +83,7 @@
         },
             "gym-membership": {
                 title: "Online Gym Membership System (Flutter & Laravel)",
-                tagline: "A mobile and web system for gym management, developed with Flutter and a Laravel backend API.",
+                tagline: "A mobile and web system for gym management, developed with Flutter and a Laravel backend API. <span style = 'color: #84cc16; font-weight: bold;'><a href ='https://github.com/Thura-Mon/GymSystemBackend' >Check GitHub Repository</a></span>",
                 images: [
                     "images/GymMembership/admin_dashboard.jpeg",
                     "images/GymMembership/admin_memberlist.jpeg",
@@ -102,7 +102,7 @@
                     "images/GymMembership/drawer.jpeg"
                 ],
                 context: "Developed an online gym membership system, consisting of a mobile front-end for users, a Laravel backend and PostgreSql (Supabase). This project focused on creating a powerful and scalable backend to manage memberships and user data.",
-                role: "I was the primary backend developer for this project, focusing heavily on the backend API development with Laravel. I also developed the core 20% of the mobile app's front-end using Flutter to ensure full-stack integration.",
+                role: "I was the primary backend developer (almost 75% of work load in Backend) for this project, focusing heavily on the backend API development with Laravel. I also developed the core 20% of the mobile app's front-end using Flutter to ensure full-stack integration.",
                 process: "The project began with a focus on designing API using Laravel. I then built the essential mobile views in Flutter that would communicate with this API for user authentication, profile management, and data retrieval from PostgreSQL using Supabase, 'Backend-as-a-Service (BaaS)'.",
                 challenges: "A key challenge was building a scalable backend that could handle multiple user requests efficiently while maintaining security. The integration between the Flutter front-end and the Laravel API required precise data handling and validation.",
                 outcome: "Successfully created a functional and scalable system with a strong backend foundation. The Laravel API is a powerful component that can support further development of the mobile app and other front-end clients.",
